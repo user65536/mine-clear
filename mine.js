@@ -6,11 +6,11 @@
     number: 5,
   }
   var oMain = document.getElementsByClassName('main')[0];
-  var row = 20;
-  var column = 20;
+  var row = 15;
+  var column = 15;
   var oItem = [];
   var len = row * column;
-  var mineNum = Math.floor(len * 0.2);
+  var mineNum = Math.floor(len * 0.1);
   var mineArr = [];
 
   function init(){
@@ -172,7 +172,10 @@
     show();
     oItem[item.positionY][item.positionX].style.background = 'red';
     oMain.removeEventListener('mousedown', down);
-    // window.alert('lose');
+    setTimeout(function () {
+      window.alert('失败');
+      location.reload()
+    }, 100)
   }
 
   function extend(item){
@@ -231,18 +234,5 @@
 
 
   init();
-
-
-
-
-
-
-
-
-
-  //test function
-  // var timer = setInterval(function () {
-  //   createMine(10);
-  // }, 100)
 
 }())
