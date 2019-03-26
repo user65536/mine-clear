@@ -10,7 +10,7 @@
   var column = 15;
   var oItem = [];
   var len = row * column;
-  var mineNum = Math.floor(len * 0.2);
+  var mineNum = Math.floor(len * 0.1);
   var mineArr = [];
 
   function init(){
